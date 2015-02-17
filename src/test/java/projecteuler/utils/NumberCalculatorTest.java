@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.junit.Test;
 
+import com.sun.org.apache.xerces.internal.impl.dv.dtd.NMTOKENDatatypeValidator;
+
 /**
  * Test NumberCalculator
  * 
@@ -62,6 +64,47 @@ public class NumberCalculatorTest {
         long result = NumberCalculator.sumEvenNumbers(numbers);
         assertEquals(92, result);
     }
+
     
+    @Test
+    public void getProduct_noParameters_returnsZero() {
+        int result = NumberCalculator.getProduct(null);
+        assertEquals(0, result);
+    }
+    
+    
+    @Test
+    public void getProduct_oneParameters_returnsTwo() {
+        int result = NumberCalculator.getProduct(2);
+        assertEquals(2, result);
+    }
+    
+    
+    @Test
+    public void getProduct_multipleParameters_returns16() {
+        int result = NumberCalculator.getProduct(2, 8);
+        assertEquals(16, result);
+    }
+
+    
+    @Test
+    public void getSum_noParameters_returnsZero() {
+        int result = NumberCalculator.getSum(null);
+        assertEquals(0, result);
+    }
+    
+    
+    @Test
+    public void getSum_oneParameter_returnsTwo() {
+        int result = NumberCalculator.getSum(2);
+        assertEquals(2, result);
+    }
+    
+    
+    @Test
+    public void getProduct_multipleParameters_returns10() {
+        int result = NumberCalculator.getSum(2, 8);
+        assertEquals(10, result);
+    }
     
 }
