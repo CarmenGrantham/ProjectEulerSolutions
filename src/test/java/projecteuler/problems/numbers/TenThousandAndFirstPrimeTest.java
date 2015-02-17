@@ -82,39 +82,4 @@ public class TenThousandAndFirstPrimeTest {
         assertEquals(11, result);
     }    
     
-    
-    @Test
-    public void isPrimeNumber_zero_returnsFalse() {
-        TenThousandAndFirstPrime prime = new TenThousandAndFirstPrime();
-        int number = 0;
-        boolean result = prime.isPrimeNumber(number);
-        assertFalse(result);
-    }   
-    
-    
-    @Test
-    public void isPrimeNumber_two_returnsTrue() {
-        TenThousandAndFirstPrime prime = new TenThousandAndFirstPrime();
-        int number = 2;
-        boolean result = prime.isPrimeNumber(number);
-        assertTrue(result);
-    }        
-    
-    
-    @Test
-    public void isPrimeNumber_four_returnsFalse() {
-        TenThousandAndFirstPrime prime = new TenThousandAndFirstPrime();
-        int number = 4;
-        boolean result = prime.isPrimeNumber(number);
-        assertFalse(result);
-    }
-    
-    
-    @Test
-    public void isPrimeNumber_fifteen_returnsFalse() {
-        TenThousandAndFirstPrime prime = new TenThousandAndFirstPrime();
-        int number = 15;
-        boolean result = prime.isPrimeNumber(number);
-        assertFalse(result);
-    }   
 }

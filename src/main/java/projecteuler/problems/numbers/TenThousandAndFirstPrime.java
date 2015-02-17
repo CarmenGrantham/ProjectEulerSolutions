@@ -1,5 +1,7 @@
 package projecteuler.problems.numbers;
 
+import projecteuler.utils.NumberUtils;
+
 /**
  * Problem: By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
  *          What is the 10 001st prime number?
@@ -49,41 +51,11 @@ public class TenThousandAndFirstPrime {
         afterNumber++;
         
         while(true) {
-            if (isPrimeNumber(afterNumber)) {
+            if (NumberUtils.isPrimeNumber(afterNumber)) {
                 return afterNumber;
             }
             afterNumber++;
         }
     }
-    
-    
-    /**
-     * Check if int is a prime or not, ie only divisible by itself and 1.
-     * 
-     * @param number the int to check
-     * @return True if int is a prime number, otherwise false
-     */
-    public boolean isPrimeNumber(int number) {
-        // all values less than or equal to 1 are not primes
-        if (number <= 1) {
-            return false;
-        }
-        
-        // 2 and 3 are prime numbers
-        if (number == 2 || number == 3) {
-            return true;
-        }
-        // if even number (and not 2 as checked above) then it's not a prime
-        if (number % 2 == 0) {
-            return false;
-        }
-        
-        // already accounted for values upto 2 and even numbers, so check odd numbers
-        for (int i = 3; i*i <= number; i+=2) {
-            if (number % i == 0) {
-                return false;
-            }
-        }
-        return true;        
-    }
+
 }
